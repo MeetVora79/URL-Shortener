@@ -159,6 +159,28 @@ Frontend runs on:
 http://localhost:5173
 ```
 
+# Run with Docker
+
+## Start Application
+
+```bash
+docker compose up --build
+```
+
+## Stop Application
+
+```bash
+docker compose down
+```
+
+Frontend:
+http://localhost:5173
+
+Backend:
+http://localhost:5000
+
+```
+
 ---
 
 # API Endpoints
