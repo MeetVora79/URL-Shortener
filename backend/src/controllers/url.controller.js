@@ -26,9 +26,9 @@ export const shortenUrl = async (req, res) => {
     }
 
     // Check if the URL already exists in the database
-    const existingUrl = await Url.findOne({ originalUrl }); 
+    const existingUrl = await Url.findOne({ originalUrl });
     if (existingUrl) {
-      return res.status(200).json({ 
+      return res.status(200).json({
         success: true,
         shortUrl: `${process.env.BASE_URL}/${existingUrl.shortCode}`,
       });
@@ -75,4 +75,3 @@ export const redirectUrl = async (req, res) => {
     res.status(500).json({ success: false, message: "Server Error" });
   }
 };
-
